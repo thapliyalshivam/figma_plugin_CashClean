@@ -6,7 +6,7 @@ import { NavigationOption } from "./Navigation";
 
 export const navigationOptions: NavigationOption[] = [
   { id: "option1", label: "Option 1" },
-  { id: "option2", label: "Option2" },
+  { id: "option2", label: "Aligner" },
   { id: "label", label: "Label" },
 ];
 
