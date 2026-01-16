@@ -1,7 +1,6 @@
 // Figma Plugin main code
 
-// Declare the globals provided by the Figma runtime and webpack bundler
-declare const figma: any;
+// Declare the globals provided by webpack bundler
 declare const __html__: string;
 
 // Import handlers and types

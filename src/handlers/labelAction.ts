@@ -1,7 +1,5 @@
 // Handler for Label action
 
-declare const figma: any;
-
 /**
  * Handles Label tool action
  */

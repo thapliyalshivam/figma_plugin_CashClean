@@ -1,13 +1,12 @@
 // Handler for Option 2 action
 
-declare const figma: any;
-
 /**
  * Calculates the median value from an array of numbers
  */
 function calculateMedian(numbers: number[]): number {
   if (numbers.length === 0) return 0;
   
+
   const sorted = [...numbers].sort((a, b) => a - b);
   const mid = Math.floor(sorted.length / 2);
   
@@ -67,6 +66,7 @@ export function handleOption2Action(): void {
 
   if (imageNodes.length === 0) {
     figma.notify("No images found in selection. Please select nodes with image fills.");
+
     return;
   }
 
@@ -97,6 +97,7 @@ export function handleOption2Action(): void {
     frame.resize(medianWidth, medianHeight);
     frame.x = originalX;
     frame.y = originalY;
+
     
     // Set frame properties
     frame.clipsContent = true; // Clipping set to true

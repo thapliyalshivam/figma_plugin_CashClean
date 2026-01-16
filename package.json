@@ -8,6 +8,7 @@
     "dev": "webpack --mode development --watch"
   },
   "devDependencies": {
+    "@figma/plugin-typings": "^1.122.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "css-loader": "^7.1.2",

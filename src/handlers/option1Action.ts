@@ -1,7 +1,5 @@
 // Handler for Option 1 action - Align elements to top
 
-declare const figma: any;
-
 /**
  * Aligns all selected elements to the top (minimum Y position)
  */

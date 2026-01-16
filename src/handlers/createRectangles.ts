@@ -1,7 +1,5 @@
 // Handler for creating rectangles
 
-declare const figma: any;
-
 /**
  * Creates two rectangles with different colors and positions them on the canvas
  */
