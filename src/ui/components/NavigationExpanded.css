@@ -1,0 +1,19 @@
+.navigation-expanded {
+  width: 100%;
+  min-height: 135px;
+  margin-top: 0;
+}
+
+.navigation-expanded-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+.navigation-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.navigation-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.navigation-scroll {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  padding-bottom: 2px; /* Space for scrollbar if needed */
+}
+
+.navigation-pill {
+  background: #f3f3f3;
+  border: none;
+  border-radius: 28px;
+  padding: 6px 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #a6a6a6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-pill:hover {
+  background: #e8e8e8;
+}
+
+.navigation-pill--active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.navigation-pill--active:hover {
+  background: #1a1a1a;
+}
+
+.navigation-pill-text {
+  display: inline-block;
+}
+
+
+
+
+
+
+

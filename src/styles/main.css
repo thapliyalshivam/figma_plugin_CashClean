@@ -1,0 +1,83 @@
+:root {
+  --bg-white: #ffffff;
+  --bg-pill-active: #9f434382;
+  --bg-pill-inactive: #f3f3f3;
+  --text-primary: #000000;
+  --text-secondary: #a6a6a6;
+  --text-white: #ffffff;
+  --radius-pill: 28px;
+  --transition-fast: 140ms ease-out;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", "Noto Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-white);
+  color: var(--text-primary);
+}
+
+.plugin-root {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+button:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
+}
+
+/* Hover animation for project-brief-promo-banner__cta */
+.project-brief-promo-banner__cta {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.project-brief-promo-banner__cta::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+}
+
+.project-brief-promo-banner__cta:hover::after {
+  animation: stroke-draw 0.5s linear forwards;
+}
+
+@keyframes stroke-draw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+
