@@ -171,7 +171,7 @@ export function handleOption2Action(): void {
         }
       }
       
-      // Scroll to view all frames
+      // Scroll to view all frame
       figma.viewport.scrollAndZoomIntoView(createdFrames);
     }
     
