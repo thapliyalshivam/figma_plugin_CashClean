@@ -95,6 +95,7 @@ export function handleOption2Action(): void {
     const frame = figma.createFrame();
     frame.name = imageNode.name || "Image Frame";
     frame.resize(medianWidth, medianHeight);
+    frame.cornerRadius = 20;
     frame.x = originalX;
     frame.y = originalY;
 

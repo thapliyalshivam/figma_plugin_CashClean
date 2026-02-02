@@ -15,7 +15,7 @@ import {
 } from "./handlers";
 
 // Render the React UI inside the plugin window
-figma.showUI(__html__, { width: 220, height: 500 });
+figma.showUI(__html__, { width: 420, height: 500 });
 
 // Listen for messages from the UI and handle tool actions
 figma.ui.onmessage = (msg: PluginMessage) => {
