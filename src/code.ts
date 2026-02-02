@@ -11,6 +11,7 @@ import {
   handleOption1Action,
   handleOption2Action,
   handleLabelAction,
+  handleOption4Action,
 } from "./handlers";
 
 // Render the React UI inside the plugin window
@@ -39,9 +40,14 @@ figma.ui.onmessage = (msg: PluginMessage) => {
       handleLabelAction();
       break;
 
+    case "option4-action":
+      handleOption4Action(msg.style || "fill");
+      break;
+
     default:
       console.warn(`Unknown message type: ${(msg as any).type}`);
   }
 };
+
 
 

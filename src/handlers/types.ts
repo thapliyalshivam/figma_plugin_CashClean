@@ -6,5 +6,7 @@ export type PluginMessage = {
     | "close-plugin"
     | "option1-action"
     | "option2-action"
-    | "label-action";
+    | "label-action"
+    | "option4-action";
+  style?: "fill" | "stroke";
 };
