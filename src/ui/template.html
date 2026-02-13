@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <script>
+      // Set before bundle runs so webpack doesn't use automatic publicPath (unsupported in Figma plugin)
+      self.__webpack_public_path__ = "";
+    </script>
     <div id="root"></div>
   </body>
 </html>

@@ -29,14 +29,12 @@ const server = http.createServer((req, res) => {
     const url = new URL(req.url, `http://${req.headers.host}`);
     let pathname = decodeURIComponent(url.pathname);
 
-    // Default to ui.html when hitting the root
     if (pathname === "/") {
       pathname = "/ui.html";
     }
 
     const requestedPath = path.normalize(path.join(DIST_DIR, pathname));
 
-    // Prevent directory traversal outside dist
     if (!requestedPath.startsWith(DIST_DIR)) {
       res.statusCode = 403;
       res.end("Forbidden");
@@ -51,9 +49,22 @@ const server = http.createServer((req, res) => {
       }
 
       const contentType = getContentType(requestedPath);
+      const isHtml = path.extname(requestedPath).toLowerCase() === ".html";
+
+      if (isHtml) {
+        const stream = fs.createReadStream(requestedPath);
+        res.statusCode = 200;
+        res.setHeader("Content-Type", contentType);
+        stream.on("error", () => {
+          res.statusCode = 500;
+          res.end("Internal server error");
+        });
+        stream.pipe(res);
+        return;
+      }
+
       res.statusCode = 200;
       res.setHeader("Content-Type", contentType);
-
       const stream = fs.createReadStream(requestedPath);
       stream.on("error", () => {
         res.statusCode = 500;
