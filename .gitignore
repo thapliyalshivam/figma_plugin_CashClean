@@ -6,7 +6,7 @@ package-lock.json
 dist/
 *.js.map
 
-# IDE
+#  IDE
 .vscode/
 .idea/
 *.swp
