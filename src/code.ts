@@ -8,11 +8,12 @@ import {
   PluginMessage,
   handleCreateRectangles,
   handleClosePlugin,
-  handleOption1Action,
   handleOption2Action,
   handleLabelAction,
   handleOption4Action,
   handleCopycatAction,
+  handleCopyAndDesAction,
+  handleLoosePointAction,
 } from "./handlers";
 
 // Render the React UI inside the plugin window
@@ -29,10 +30,6 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
       handleClosePlugin();
       break;
 
-    case "option1-action":
-      handleOption1Action();
-      break;
-
     case "option2-action":
       handleOption2Action();
       break;
@@ -47,6 +44,14 @@ figma.ui.onmessage = async (msg: PluginMessage) => {
 
     case "option5-action":
       await handleCopycatAction();
+      break;
+
+    case "copyanddes-action":
+      await handleCopyAndDesAction(msg.docContent ?? "", msg.docUrl);
+      break;
+
+    case "loose-point-action":
+      handleLoosePointAction();
       break;
 
     default:

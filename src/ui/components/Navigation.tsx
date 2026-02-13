@@ -7,6 +7,7 @@ export interface NavigationOption {
 }
 
 interface NavigationProps {
+  /** Main feature header pills (e.g. Copy, Layout). */
   options: NavigationOption[];
   selectedId: string | null;
   onSelect: (id: string) => void;

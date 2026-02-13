@@ -1,0 +1,27 @@
+.option4-tool-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.option4-style-button {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 28px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  transition: opacity 0.2s ease;
+}
+
+.option4-style-button:hover {
+  opacity: 0.9;
+}
+
+.option4-style-button--active {
+  background: #000000;
+}

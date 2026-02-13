@@ -1,4 +1,4 @@
-// Handler for Option 2 action
+// Handler for Option 2 action (Aligner)
 
 /**
  * Calculates the median value from an array of numbers
@@ -29,7 +29,7 @@ function hasImageFill(node: any): boolean {
 }
 
 /**
- * Handles Option 2 tool action:
+ * Handles Option 2 tool action (Aligner):
  * 1. Finds median height and width from selected images
  * 2. Creates frames with those dimensions (clipping=true, fill parent, center aligned)
  * 3. Aligns all frames using tidy command

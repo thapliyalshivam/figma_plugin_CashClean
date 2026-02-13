@@ -1,41 +1,59 @@
 import React from "react";
 import {
-  Option1Tool,
-  Option2Tool,
-  LabelTool,
+  AlignerTool,
   Option4Tool,
-  Option5Tool,
+  LoosePointTool,
+  CopycatTool,
+  CopyAndDesTool,
 } from "./tools";
-import { NavigationOption } from "./Navigation";
 
-export const navigationOptions: NavigationOption[] = [
-  { id: "option1", label: "Option 1" },
-  { id: "option2", label: "Aligner" },
-  { id: "label", label: "Label" },
-  { id: "option4", label: "Option 4" },
-  { id: "option5", label: "Copycat" },
+/** One main tab in the feature header (e.g. Copy, Layout). */
+export interface MainNavOption {
+  id: string;
+  label: string;
+  subFeatures: SubFeatureOption[];
+}
+
+/** One sub-feature under a main tab. */
+export interface SubFeatureOption {
+  id: string;
+  label: string;
+}
+
+export const mainNavOptions: MainNavOption[] = [
+  {
+    id: "copy",
+    label: "Copy",
+    subFeatures: [
+      { id: "copycat", label: "Copycat" },
+      { id: "copyanddes", label: "Copy and Des" },
+    ],
+  },
+  {
+    id: "layout",
+    label: "Layout",
+    subFeatures: [
+      { id: "aligner", label: "Aligner" },
+      { id: "loosepoint", label: "Loose point" },
+      { id: "option4", label: "Option 4" },
+    ],
+  },
 ];
 
-export const renderTool = (toolId: string | null): React.ReactNode => {
-  switch (toolId) {
-    case "option1":
-      return <Option1Tool />;
-    case "option2":
-      return <Option2Tool />;
-    case "label":
-      return <LabelTool />;
+export function renderSubFeature(subFeatureId: string | null): React.ReactNode {
+  switch (subFeatureId) {
+    case "copycat":
+      return <CopycatTool />;
+    case "copyanddes":
+      return <CopyAndDesTool />;
     case "option4":
       return <Option4Tool />;
-    case "option5":
-      return <Option5Tool />;
+    case "aligner":
+      return <AlignerTool />;
+    case "loosepoint":
+      return <LoosePointTool />;
     default:
       return null;
   }
-};
-
-
-
-
-
-
+}
 

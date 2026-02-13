@@ -3,8 +3,10 @@
 export * from "./types";
 export * from "./createRectangles";
 export * from "./closePlugin";
-export * from "./option1Action";
-export * from "./option2Action";
 export * from "./labelAction";
-export * from "./option4Action";
-export * from "./copycatAction";
+
+export * from "./copy/copycatAction";
+export * from "./copy/copyAndDesAction";
+export * from "./layout/option4Action";
+export * from "./layout/option2Action";
+export * from "./layout/loosePointAction";

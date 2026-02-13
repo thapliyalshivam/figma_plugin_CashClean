@@ -1,12 +1,8 @@
-export { Option1Tool } from "./Option1Tool";
-export { Option2Tool } from "./Option2Tool";
 export { LabelTool } from "./LabelTool";
-export { Option4Tool } from "./Option4Tool";
-export { Option5Tool } from "./Option5Tool";
 
+export { CopycatTool } from "./copy/CopycatTool";
+export { CopyAndDesTool } from "./copy/CopyAndDesTool";
 
-
-
-
-
-
+export { Option4Tool } from "./layout/Option4Tool";
+export { AlignerTool } from "./layout/AlignerTool";
+export { LoosePointTool } from "./layout/LoosePointTool";

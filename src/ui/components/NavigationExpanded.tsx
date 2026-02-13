@@ -1,29 +1,30 @@
 import React from "react";
 import "./NavigationExpanded.css";
+import { mainNavOptions, renderSubFeature } from "./toolRegistry";
 
 interface NavigationExpandedProps {
-  selectedOptionId: string | null;
-  children?: React.ReactNode;
+  selectedMainId: string | null;
 }
 
 export const NavigationExpanded: React.FC<NavigationExpandedProps> = ({
-  selectedOptionId,
-  children,
+  selectedMainId,
 }) => {
-  if (!selectedOptionId) {
+  if (!selectedMainId) {
     return null;
   }
 
+  const main = mainNavOptions.find((m) => m.id === selectedMainId);
+  const subFeatures = main?.subFeatures ?? [];
+
   return (
     <div className="navigation-expanded">
-      <div className="navigation-expanded-content">{children}</div>
+      <div className="navigation-expanded-content">
+        {subFeatures.map((sub) => (
+          <React.Fragment key={sub.id}>
+            {renderSubFeature(sub.id)}
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 };
-
-
-
-
-
-
-

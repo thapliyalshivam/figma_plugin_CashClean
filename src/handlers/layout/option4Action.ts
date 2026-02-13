@@ -174,4 +174,3 @@ export function handleOption4Action(_style: "fill" | "stroke"): void {
     );
   }
 }
-

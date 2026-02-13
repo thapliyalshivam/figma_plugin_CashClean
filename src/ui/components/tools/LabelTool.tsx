@@ -1,9 +1,8 @@
 import React from "react";
-import "./ToolBase.css";
+import { SubFeatureLayout } from "../SubFeatureLayout";
 
 export const LabelTool: React.FC = () => {
   const handleAction = () => {
-    // Tool-specific logic here
     parent.postMessage(
       { pluginMessage: { type: "label-action" } },
       "*"
@@ -11,15 +10,15 @@ export const LabelTool: React.FC = () => {
   };
 
   return (
-    <div className="tool-container">
-      <h2 className="tool-title">Label Tool</h2>
-      <p className="tool-description">
-        This is the tool component for Label. Add your specific functionality here.
-      </p>
-      <button className="tool-button" onClick={handleAction}>
-        Execute Label Tool
-      </button>
-    </div>
+    <SubFeatureLayout
+      headline="Label Tool"
+      copy="This is the tool component for Label. Add your specific functionality here."
+      actionRow={
+        <button className="subfeature-btn" onClick={handleAction}>
+          Execute Label Tool
+        </button>
+      }
+    />
   );
 };
 

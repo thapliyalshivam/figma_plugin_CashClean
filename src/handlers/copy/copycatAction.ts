@@ -2,7 +2,7 @@
 
 declare const figma: any;
 
-import { geminiService } from "../services/gemini";
+import { geminiService } from "../../services/gemini";
 
 type AnyNode = SceneNode | PageNode | DocumentNode;
 
