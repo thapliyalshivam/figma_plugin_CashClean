@@ -158,6 +158,7 @@ export function handleOption4Action(_style: "fill" | "stroke"): void {
 
   // If there is a selection, operate within that subtree.
   // Otherwise, operate on the entire current page.
+  
   const roots: AnyNode[] =
     selection.length > 0 ? (selection as AnyNode[]) : [figma.currentPage as AnyNode];
 

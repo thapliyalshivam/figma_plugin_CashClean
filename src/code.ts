@@ -12,13 +12,14 @@ import {
   handleOption2Action,
   handleLabelAction,
   handleOption4Action,
+  handleCopycatAction,
 } from "./handlers";
 
 // Render the React UI inside the plugin window
 figma.showUI(__html__, { width: 420, height: 500 });
 
 // Listen for messages from the UI and handle tool actions
-figma.ui.onmessage = (msg: PluginMessage) => {
+figma.ui.onmessage = async (msg: PluginMessage) => {
   switch (msg.type) {
     case "create-rectangles":
       handleCreateRectangles();
@@ -42,6 +43,10 @@ figma.ui.onmessage = (msg: PluginMessage) => {
 
     case "option4-action":
       handleOption4Action(msg.style || "fill");
+      break;
+
+    case "option5-action":
+      await handleCopycatAction();
       break;
 
     default:

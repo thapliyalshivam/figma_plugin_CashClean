@@ -7,6 +7,7 @@ export type PluginMessage = {
     | "option1-action"
     | "option2-action"
     | "label-action"
-    | "option4-action";
+    | "option4-action"
+    | "option5-action";
   style?: "fill" | "stroke";
 };

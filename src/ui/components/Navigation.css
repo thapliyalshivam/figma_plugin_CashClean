@@ -3,19 +3,19 @@
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .navigation-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 .navigation-scroll {
   display: flex;
-  gap: 7px;
+  gap: 0px;
   align-items: center;
-  padding-bottom: 2px; /* Space for scrollbar if needed */
+  padding-bottom: 2px;
 }
 
 .navigation-pill {
@@ -53,10 +53,3 @@
 .navigation-pill-text {
   display: inline-block;
 }
-
-
-
-
-
-
-

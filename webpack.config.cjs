@@ -1,6 +1,9 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
+
+require("dotenv").config();
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -30,6 +33,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      __GEMINI_API_KEY__: JSON.stringify(process.env.GEMINI_API_KEY || ""),
+    }),
     new HtmlWebpackPlugin({
       filename: "ui.html",
       template: "src/ui/template.html",

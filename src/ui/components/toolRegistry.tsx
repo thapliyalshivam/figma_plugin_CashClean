@@ -1,8 +1,11 @@
 import React from "react";
-import { Option1Tool } from "./tools/Option1Tool";
-import { Option2Tool } from "./tools/Option2Tool";
-import { LabelTool } from "./tools/LabelTool";
-import { Option4Tool } from "./tools/Option4Tool";
+import {
+  Option1Tool,
+  Option2Tool,
+  LabelTool,
+  Option4Tool,
+  Option5Tool,
+} from "./tools";
 import { NavigationOption } from "./Navigation";
 
 export const navigationOptions: NavigationOption[] = [
@@ -10,6 +13,7 @@ export const navigationOptions: NavigationOption[] = [
   { id: "option2", label: "Aligner" },
   { id: "label", label: "Label" },
   { id: "option4", label: "Option 4" },
+  { id: "option5", label: "Copycat" },
 ];
 
 export const renderTool = (toolId: string | null): React.ReactNode => {
@@ -22,6 +26,8 @@ export const renderTool = (toolId: string | null): React.ReactNode => {
       return <LabelTool />;
     case "option4":
       return <Option4Tool />;
+    case "option5":
+      return <Option5Tool />;
     default:
       return null;
   }

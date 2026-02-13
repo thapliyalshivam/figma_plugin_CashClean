@@ -1,0 +1,37 @@
+.option5-tool-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+}
+
+.option5-tool-description {
+  margin: 0;
+  font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.option5-submit-button {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.option5-submit-button:hover {
+  background: #333333;
+}
+
+.option5-submit-button:active {
+  background: #1a1a1a;
+}

@@ -40,8 +40,8 @@ export const Option4Tool: React.FC = () => {
         This is the tool component for Option 1. Add your specific functionality
         here.
       </p>
-      <button className="option4-submit-button" onClick={handleSubmit}>
-        <span className="option4-submit-button-text">Submit</span>
+        <button className="option4-submit-button" onClick={handleSubmit}>
+        Submit
       </button>
     </div>
   );
